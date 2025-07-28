@@ -12,7 +12,7 @@ export default function Profile() {
 
   return (
     isAuthenticated && (
-      <div className="mt-4 p-4 border rounded-lg">
+      <div className="flex flex-col justify-center items-center mt-4 p-4 border rounded-lg">
         {user.picture && (
           <img
             src={user.picture}

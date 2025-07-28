@@ -53,7 +53,7 @@ export default function APISecurityTest() {
   };
 
   return (
-    <div className="mt-6 p-4 border rounded">
+    <div className="mt-6 p-4 border rounded inline-block">
       <h2 className="text-xl font-bold mb-2">Auth0 Security Test</h2>
       <div className="flex gap-4 mb-4">
         <button
