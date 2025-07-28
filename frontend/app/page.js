@@ -1,12 +1,14 @@
 import LoginButton from "./components/LoginButton";
 import Profile from "./components/Profile";
 import Link from "next/link";
+import TokenFetcher from "./components/TokenFetcher";
 
 export default function Home() {
   return (
     <main className="p-24">
       <h1 className="text-2xl font-bold mb-4">Project 2 using Auth0</h1>
       <Profile />
+      <TokenFetcher />
       <LoginButton />
       <Link
         href="/protected"
