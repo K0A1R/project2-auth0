@@ -1,6 +1,17 @@
+## Getting Backend Started
+
+1. Have Extensions Pack for Java downloaded in VSCode
+2. The backend folder is opened in a separate VSCode window
+
+```bash
+./mvnw clean install
+
+.\mvnw.cmd spring-boot:run
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Frontend Started
 
 First, run the development server:
 
