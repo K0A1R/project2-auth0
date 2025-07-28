@@ -5,7 +5,7 @@ import TokenFetcher from "./components/TokenFetcher";
 
 export default function Home() {
   return (
-    <main className="p-24">
+    <main className="flex flex-col items-center justify-center min-h-screen p-4">
       <h1 className="text-2xl font-bold mb-4">Project 2 using Auth0</h1>
       <Profile />
       <TokenFetcher />
