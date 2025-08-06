@@ -12,7 +12,7 @@ export default function Home() {
       <LoginButton />
       <Link
         href="/protected"
-        className="mt-4 inline-block text-blue-600 hover:underline"
+        className="mt-4 inline-block text-blue-600 hover:underline ml-3"
       >
         Go to Protected Page
       </Link>
