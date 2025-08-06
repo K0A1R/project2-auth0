@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
+// This components calls the protected API in the backend and displays the response
 export default function CallProtectedApi() {
   const { getAccessTokenSilently, isAuthenticated } = useAuth0();
   const [response, setResponse] = useState(null);

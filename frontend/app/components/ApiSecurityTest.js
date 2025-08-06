@@ -2,10 +2,13 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
 
+// This component tests the security of the Auth0 integration by simulating API calls
 export default function APISecurityTest() {
   const { getAccessTokenSilently, isAuthenticated } = useAuth0();
   const [logs, setLogs] = useState([]);
 
+  // Function to the log the results of each API call test 
+  // Logs are given a label, status, message, and time
   const logResult = (label, status, message) => {
     setLogs((prev) => [
       ...prev,
@@ -13,6 +16,8 @@ export default function APISecurityTest() {
     ]);
   };
 
+
+  // Function to simulate a call to the protected API with no token
   const callWithoutToken = async () => {
     try {
       const res = await fetch("http://localhost:8080/api/protected");
@@ -23,6 +28,7 @@ export default function APISecurityTest() {
     }
   };
 
+  // Function to simulate a call to the protected API with a valid token from Auth0
   const callWithValidToken = async () => {
     try {
       const token = await getAccessTokenSilently();
@@ -38,6 +44,7 @@ export default function APISecurityTest() {
     }
   };
 
+  // Function to simulate a call to the protected API with an invalid token
   const callWithInvalidToken = async () => {
     try {
       const res = await fetch("http://localhost:8080/api/protected", {
